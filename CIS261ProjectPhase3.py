@@ -76,9 +76,9 @@ def printinfo(DetailsPrinted):
             if not EmpDetail:
                 break
             # write the line of code that will remove the carriage return from EmpDetail
-            EmpDetail = Empdetail.replace("\n", "")
+            EmpDetail = EmpDetail.replace("\n", "")
             # write the ine of code that will split EmpDetail on the pipe delimiter and assign to the list EmpList
-            Emplist = EmpDetail.split("|")
+            EmpList = EmpDetail.split("|")
 #********************************************************************************************************************************
             fromdate = EmpList[0]
             if (str(rundate).upper() != "ALL"):
@@ -143,7 +143,7 @@ if __name__ == "__main__":
                 fromdate = fromdate.strftime('%Y-%m-%d')
                 todate = todate.strftime('%Y-%m-%d')
                 # write the line of code that will assign to EmpDetail a pipe delimited string of fromdate, todate, empname, hours, hourlyrate and taxrate and a carriage return at the end
-                EmpDetail = fromdate + "|" + todate + "|" + empname + "|" + str(hours) + "|" + str(hourlyrate) + "|" + str(taxrate) + "\n"
+                EmpDetail = fromdate + "|" + todate  + "|" + empname  + "|" + str(hours)  + "|" + str(hourlyrate)  + "|" + str(taxrate) + "\n"
                 # write the line of code that will write EmpDetail to the file
                 EmpFile.write(EmpDetail)
             # close file to save data
